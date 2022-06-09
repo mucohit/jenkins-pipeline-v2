@@ -7,5 +7,11 @@ pipeline {
                 sh 'echo integrating jenkins with Github using Jenkinsfile'
             }
         }
+        stage('run') {
+            steps {
+                sh 'python --version'
+                sh 'python pipeline.py'
+            }
+        }
     }
 }
