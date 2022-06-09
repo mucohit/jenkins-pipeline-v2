@@ -3,15 +3,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Mucahit from pipeline'
-                sh 'echo integrating jenkins with Github using Jenkinsfile'
+                echo 'Java Code'
+                sh 'javac Hello.java'
             }
         }
         stage('run') {
             steps {
-                echo 'Reinvent yourself'
-                sh 'python --version'
-                sh 'python pipeline.py'
+                echo 'Running java code'
+                sh 'java Hello'
             }
         }
     }
